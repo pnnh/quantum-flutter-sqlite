@@ -35,15 +35,6 @@ target_link_libraries(QuantumNative PRIVATE SQLite3)
 
 if (APPLE)
     message("configure for Apple")
-#    set(MACOSX_FRAMEWORK_IDENTIFIER "direct.multiverse.QuantumNative")
-#    set(MACOSX_FRAMEWORK_NAME "QuantumNative")
-#    set(MACOSX_FRAMEWORK_BUNDLE_VERSION "1.0.0")
-#    set(MACOSX_FRAMEWORK_SHORT_VERSION_STRING "1.0.0")
-
-    # set(RESOURCE_FILES
-    #         ${CMAKE_BINARY_DIR}/cppjieba/src/cppjieba/dict/jieba.dict.utf8)
-
-    message("cppjiebadict ${RESOURCE_FILES}")
     set_target_properties(QuantumNative PROPERTIES
             FRAMEWORK TRUE
             FRAMEWORK_VERSION A

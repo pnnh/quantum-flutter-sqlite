@@ -19,12 +19,12 @@ A new flutter plugin project.
   s.platform = :osx, '10.13'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.swift_version = '5.0'
-  s.prepare_command = <<-CMD
-    cmake --preset Default
-    xcodebuild -project target/quantum.xcodeproj -scheme quantum -configuration Release build
-  CMD
+  #s.prepare_command = <<-CMD
+  #  cmake --preset Default
+  #  xcodebuild -project target/quantum.xcodeproj -scheme quantum -configuration Release build
+  #CMD
 
-      # s.vendored_library    = './build/shared/Debug/libquantum.dylib'
+  # s.vendored_library    = './build/shared/Debug/libquantum.dylib'
   #s.vendored_library    = 'libquantum.dylib'
   s.vendored_libraries = "target/lib/Release/**/*.dylib"
   #s.library  = 'quantum'

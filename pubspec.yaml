@@ -15,19 +15,14 @@ flutter:
       android:
         package: direct.multiverse.quantum
         pluginClass: QuantumPlugin
-        ffiPlugin: true
       ios:
         pluginClass: QuantumPlugin
-        ffiPlugin: true
       macos:
         pluginClass: QuantumPlugin
-        ffiPlugin: true
       windows:
         pluginClass: QuantumPlugin
-        ffiPlugin: true
       linux:
         pluginClass: QuantumPlugin
-        ffiPlugin: true
 
 dependencies:
   flutter:

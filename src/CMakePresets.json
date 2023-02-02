@@ -35,12 +35,30 @@
             "CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED": "NO"
         },
         "environment": {}
+      },
+      {
+        "name": "macOS",
+        "displayName": "macOS Config",
+        "description": "macOS build using Xcode generator",
+        "generator": "Xcode",
+        "binaryDir": "${sourceDir}/output/macos",
+        "cacheVariables": {
+          "CMAKE_OSX_DEPLOYMENT_TARGET": {
+            "type": "STRING",
+            "value": "10.13"
+          }
+        },
+        "environment": {}
       }
     ],
     "buildPresets": [
       {
         "name": "iOS",
         "configurePreset": "iOS"
+      },
+      {
+        "name": "macOS",
+        "configurePreset": "macOS"
       }
     ]
   }
