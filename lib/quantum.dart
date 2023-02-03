@@ -45,7 +45,7 @@ extension Sqlite3FtsExtension on Database {
       // ../Frameworks/App.framework/Resources/flutter_assets/packages/quantum/dicts
       dictPath = join(dir, '..', 'Frameworks', 'App.framework', 'Resources',
           'flutter_assets', 'packages', 'quantum');
-      dictPath = join(dictPath, 'dicts');
+      dictPath = join(dictPath, 'resources', 'jieba', 'dicts');
     } else if (Platform.isLinux) {
       simpleLibPath = join(dir, 'lib', 'libsimple.so');
       // data/flutter_assets/packages/quantum/dicts
