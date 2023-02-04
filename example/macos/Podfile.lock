@@ -3,7 +3,7 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - quantum (0.0.1):
+  - quantum_sqlite (0.0.1):
     - FlutterMacOS
   - sqlite3 (3.40.0):
     - sqlite3/common (= 3.40.0)
@@ -24,7 +24,7 @@ PODS:
 DEPENDENCIES:
   - FlutterMacOS (from `Flutter/ephemeral`)
   - path_provider_foundation (from `Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/macos`)
-  - quantum (from `Flutter/ephemeral/.symlinks/plugins/quantum/macos`)
+  - quantum_sqlite (from `Flutter/ephemeral/.symlinks/plugins/quantum_sqlite/macos`)
   - sqlite3_flutter_libs (from `Flutter/ephemeral/.symlinks/plugins/sqlite3_flutter_libs/macos`)
 
 SPEC REPOS:
@@ -36,15 +36,15 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral
   path_provider_foundation:
     :path: Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/macos
-  quantum:
-    :path: Flutter/ephemeral/.symlinks/plugins/quantum/macos
+  quantum_sqlite:
+    :path: Flutter/ephemeral/.symlinks/plugins/quantum_sqlite/macos
   sqlite3_flutter_libs:
     :path: Flutter/ephemeral/.symlinks/plugins/sqlite3_flutter_libs/macos
 
 SPEC CHECKSUMS:
-  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  FlutterMacOS: ae6af50a8ea7d6103d888583d46bd8328a7e9811
   path_provider_foundation: 37748e03f12783f9de2cb2c4eadfaa25fe6d4852
-  quantum: f823f206b724894b4d6e9b036988c8e9506dab34
+  quantum_sqlite: b084f66044d15a5a4c220310c9c45d0fe7c317fc
   sqlite3: 88dd99ef4ac3945f5a15facdd752933c52fd93bf
   sqlite3_flutter_libs: 7523e007b12584944a26feaa9975ea741eab136f
 

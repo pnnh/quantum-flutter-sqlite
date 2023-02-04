@@ -6,7 +6,7 @@ import FlutterMacOS
 import Foundation
 
 import path_provider_foundation
-import quantum
+import quantum_sqlite
 import sqlite3_flutter_libs
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {

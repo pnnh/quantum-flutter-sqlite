@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:quantum/quantum.dart';
-import 'package:quantum_example/utils.dart';
+import 'package:quantum_sqlite/quantum.dart';
 import 'package:sqlite3/sqlite3.dart' hide Row;
 
 void main() {

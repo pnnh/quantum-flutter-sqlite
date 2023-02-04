@@ -1,4 +1,4 @@
-name: quantum
+name: quantum_sqlite
 description: A flutter plugin for dream project.
 version: 0.0.1 
 
@@ -12,17 +12,17 @@ flutter:
     - resources/jieba/dicts/pos_dict/
   plugin:
     platforms:
-      android:
-        package: direct.multiverse.quantum
-        pluginClass: QuantumPlugin
+#      android:
+#        package: direct.multiverse.quantum
+#        pluginClass: QuantumPlugin
       ios:
         pluginClass: QuantumPlugin
       macos:
         pluginClass: QuantumPlugin
-      windows:
-        pluginClass: QuantumPlugin
-      linux:
-        pluginClass: QuantumPlugin
+#      windows:
+#        pluginClass: QuantumPlugin
+#      linux:
+#        pluginClass: QuantumPlugin
 
 dependencies:
   flutter:
