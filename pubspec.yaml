@@ -1,6 +1,7 @@
 name: quantum_sqlite
 description: A flutter plugin for dream project.
-version: 0.0.1 
+version: 0.1.0
+repository: https://github.com/pnnh/quantum-flutter-sqlite.git
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
