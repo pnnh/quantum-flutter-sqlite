@@ -31,3 +31,5 @@ lib/gen/*
 
 cmake-build-*
 output/
+install/
+target/

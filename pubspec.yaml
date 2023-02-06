@@ -1,6 +1,6 @@
 name: quantum_sqlite
-description: A flutter plugin for dream project.
-version: 0.1.0
+description: A wrapper around the sqlite library. Using libsimple and jieba to support Chinese word segmentation and full-text search.
+version: 0.1.1
 repository: https://github.com/pnnh/quantum-flutter-sqlite.git
 
 environment:

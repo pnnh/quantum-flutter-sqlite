@@ -8,15 +8,15 @@ import 'package:sqlite3/open.dart';
 import 'package:sqlite3/sqlite3.dart';
 import 'package:path/path.dart';
 
-final _Binding binding = _Binding(open.openSqlite());
+final _Binding _binding = _Binding(open.openSqlite());
 
 extension Sqlite3FtsExtension on Database {
   void loadExtesnion(String zFile) {
     // FIXME https://www.sqlite.org/c3ref/enable_load_extension.html
-    binding.sqlite3EnableLoadExtension(handle.cast(), 1);
+    _binding.sqlite3EnableLoadExtension(handle.cast(), 1);
 
     final errorOut = malloc<Pointer<Utf8>>();
-    final ret = binding.sqlite3LoadExtension(
+    final ret = _binding.sqlite3LoadExtension(
         handle.cast(), zFile.toNativeUtf8(), nullptr, errorOut);
     try {
       if (ret != 0) {
@@ -27,7 +27,7 @@ extension Sqlite3FtsExtension on Database {
       malloc.free(errorOut);
     }
 
-    binding.sqlite3EnableLoadExtension(handle.cast(), 0);
+    _binding.sqlite3EnableLoadExtension(handle.cast(), 0);
   }
 
   void loadSimpleExtension() {
@@ -81,30 +81,30 @@ extension Sqlite3FtsExtension on Database {
   }
 }
 
-typedef _sqlite3_load_extension_native = Int32 Function(Pointer<Void> db,
+typedef _Sqlite3LoadExtensionNative = Int32 Function(Pointer<Void> db,
     Pointer<Utf8> zFile, Pointer<Utf8> zProc, Pointer<Pointer<Utf8>> pzErrMsg);
-typedef _sqlite3_load_extension_dart = int Function(Pointer<Void> db,
+typedef _Sqlite3LoadExtensionDart = int Function(Pointer<Void> db,
     Pointer<Utf8> zFile, Pointer<Utf8> zProc, Pointer<Pointer<Utf8>> pzErrMsg);
 
-typedef _sqlite3_enable_load_extension_native = Int32 Function(
+typedef _Sqlite3EnableLoadExtensionNative = Int32 Function(
     Pointer<Void> db, Int32 onoff);
-typedef _sqlite3_enable_load_extension_dart = int Function(
+typedef _Sqlite3EnableLoadExtensionDart = int Function(
     Pointer<Void> db, int onoff);
 
 class _Binding {
   _Binding(this.library)
       : sqlite3LoadExtension = library.lookupFunction<
-      _sqlite3_load_extension_native,
-      _sqlite3_load_extension_dart>("sqlite3_load_extension"),
+      _Sqlite3LoadExtensionNative,
+      _Sqlite3LoadExtensionDart>("sqlite3_load_extension"),
         sqlite3EnableLoadExtension = library.lookupFunction<
-            _sqlite3_enable_load_extension_native,
-            _sqlite3_enable_load_extension_dart>(
+            _Sqlite3EnableLoadExtensionNative,
+            _Sqlite3EnableLoadExtensionDart>(
             "sqlite3_enable_load_extension");
 
   final DynamicLibrary library;
 
-  final _sqlite3_load_extension_dart sqlite3LoadExtension;
-  final _sqlite3_enable_load_extension_dart sqlite3EnableLoadExtension;
+  final _Sqlite3LoadExtensionDart sqlite3LoadExtension;
+  final _Sqlite3EnableLoadExtensionDart sqlite3EnableLoadExtension;
 }
 
 

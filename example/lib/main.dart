@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:quantum_sqlite/quantum.dart';
+import 'package:quantum_sqlite/quantum_sqlite.dart';
 import 'package:sqlite3/sqlite3.dart' hide Row;
 
 void main() {
@@ -92,7 +92,7 @@ insert into t1(x) values
             ),
             SizedBox(
                 child: TextButton(
-                    child: Text('Search'),
+                    child: const Text('Search'),
                     onPressed: () async {
                       final queryType =
                       _enableJieBa ? 'jieba_query' : 'simple_query';
