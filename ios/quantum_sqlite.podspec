@@ -25,7 +25,7 @@ A new flutter plugin project.
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
     'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks',
     'OTHER_LDFLAGS' => '$(inherited) -ObjC'
-   }
+  }
   s.vendored_libraries = 'Libraries/libsimple.a', 'Libraries/libPINYIN_TEXT.a'
 
   s.dependency 'sqlite3', '~> 3.40.0'
